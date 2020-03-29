@@ -1,4 +1,9 @@
-## Algorithm notes:-
+# Algorithm notes:-
+
+### How to run the solution?
+`npm start` and select the program you want to run.
+
+## Basics
 
 ### Frequency counter pattern
 1. Two arrays [1,2,2,5] and [1,4,25,4] find if the second array is exact square of first.
@@ -20,15 +25,50 @@
 4. Compare root and scout. If they are same increment scout.
 5. If they are different, add root to result.
 6. Do this till scout runs through entire array
-Note- One variation, for above implementation space complexity is O(n). To avoid that, same array can be manipulated. In that case, the position of root after running the algo, will give the unique elements.
+Note- One variation, for above implementation space complexity is O(n). To avoid that, same array can be manipulated. In that case, the position of root after running the algorithm, will give the unique elements.
 
 ### Sliding window pattern
-1. Given any array and a value N, we have to find the subarray and the maximum sum of N consecutive elements in that array.
+1. Given any array and a value N, we have to find the sub-array and the maximum sum of N consecutive elements in that array.
 2. Brute force would be to loop through all the elements and find the sum of next N integers. But this is a problem if array is very large.
 3. Better approach is, starting at 0 index, find the sum of N elements, and set a temporary max sum.
-4. Next we run through the array again and keep substracting an element and add the next element.
+4. Next we run through the array again and keep subtracting an element and add the next element.
 5. Effectively we are moving the window forward.
 6 If we find a sum greater than temp max sum, we update it.
 
 ### Recursion
- 
+1. Has 2 elements :- A base case & a function that calls itself, with a reducing set of input to recursive call.
+2. Helper method recursion is a pattern that is used when we want to collect the results in an collection.
+
+## Search
+
+### Linear search
+1. Loop through all the elements, compare each element.
+
+(Skipping for now, we'll come back to this)
+
+### Linked lists
+1. Linked lists are like stairs and Arrays are like a lift. In array(lift) you can say take me to 5th floor, and it will directly take you there, but in linked list, you have to traverse like a stair, first floor, then second, then third, fourth, then fifth.
+2. There is no index. Linked lists is a bunch of nodes, holding each other.
+3. Linked list have only 3 properties, head tail and length.
+4. Difference between arrays and lists.
+    #### Lists 
+
+    a. Do not have indexes!
+    b. Connected via nodes with a next pointer
+    c. Random access is not allowed
+
+    #### Arrays
+
+    a. Indexed in order!
+    b. Insertion and deletion can be expensive
+    c. Can quickly be accessed at a specific index.
+    
+5. Operations:
+    
+    #### Push
+    a. This function should accept a value
+    b. Create a new node using the value passed to the function
+    c. If there is no head property on the list, set the head and tail to be the newly created node
+    d. Otherwise set the next property on the tail to be the new node and set the tail property on the list to be the newly created node
+    e. Increment the length by one
+    f. Return the linked list

@@ -2,6 +2,7 @@ import { frequencyCounterPattern } from "./arrayMatcher";
 import { multipleCounterPattern_pair_with_sum_zero } from "./multiplePointers_PairWithSumZero";
 import { multipleCounterPattern_unique_elements } from "./multiplePointers_uniqueElements";
 import { slidingWindowPattern } from "./slidingWindow";
+import { helperMethodRecursion } from "./helperMethod_recursion";
 
 const readline = require('readline');
 
@@ -15,6 +16,7 @@ const question = `Which program you want to run?
                     2. Find the first pair whose sum is 0
                     3. Find the number of unique elements in an array
                     4. Find the maximum sum of N consecutive elements in an array
+                    5. Helper method recursion. Get odd numbers.
                     \n`;
 rl.question(question, (answer) => {
 
@@ -30,6 +32,9 @@ rl.question(question, (answer) => {
             break;
         case '4':
             slidingWindowPattern([1, 2, 4, 4, 5, 6, 6, 3, 3, 3, 5, 6, 7, 8, 5, 9, 6, 7, 8, 8, 9, 7, 6, 9, 7], 3);
+            break;
+        case '5':
+            helperMethodRecursion([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11]);
             break;
         default:
             break;
