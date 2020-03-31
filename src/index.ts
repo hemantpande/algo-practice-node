@@ -3,6 +3,7 @@ import { multipleCounterPattern_pair_with_sum_zero } from "./multiplePointers_Pa
 import { multipleCounterPattern_unique_elements } from "./multiplePointers_uniqueElements";
 import { slidingWindowPattern } from "./slidingWindow";
 import { helperMethodRecursion } from "./helperMethod_recursion";
+import { SinglyLinkedList } from "./Linked_lists/SinglyLinkedList";
 
 const readline = require('readline');
 
@@ -17,6 +18,13 @@ const question = `Which program you want to run?
                     3. Find the number of unique elements in an array
                     4. Find the maximum sum of N consecutive elements in an array
                     5. Helper method recursion. Get odd numbers.
+                    6. Singly_Linked_List - push value.
+                    7. Singly_Linked_List - pop value
+                    8. Singly_Linked_List - shift head and get it.
+                    9. Singly_Linked_List - Un-Shift head.
+                    10. Singly_Linked_List - Get by index.
+                    11. Singly_Linked_List - Set by index.
+                    12. Singly_Linked_List - Insert at given index.
                     \n`;
 rl.question(question, (answer) => {
 
@@ -36,7 +44,74 @@ rl.question(question, (answer) => {
         case '5':
             helperMethodRecursion([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11]);
             break;
+        case '6':
+            let linkedList_push = new SinglyLinkedList();
+            console.log(linkedList_push.push('Hello'));
+            console.log(linkedList_push.push(1));
+            console.log(linkedList_push.push(true));
+            console.log('Linked list', linkedList_push.traverse());
+            break;
+        case '7':
+            let linkedList_pop = new SinglyLinkedList();
+            console.log(linkedList_pop.push('Hello'));
+            console.log(linkedList_pop.push(1));
+            console.log(linkedList_pop.push(true));
+            console.log('Linked list', linkedList_pop.traverse());
+            console.log('Poped element', linkedList_pop.pop());
+            console.log('Poped element', linkedList_pop.pop());
+            console.log('Linked list', linkedList_pop.traverse());
+            console.log('Poped element', linkedList_pop.pop());
+            console.log('Linked list', linkedList_pop.traverse());
+            break;
+        case '8':
+            let linkedList_shift_head = new SinglyLinkedList();
+            console.log(linkedList_shift_head.push('Hello'));
+            console.log(linkedList_shift_head.push(1));
+            console.log(linkedList_shift_head.push(true));
+            console.log('Linked list', linkedList_shift_head.traverse());
+            console.log('Old head', linkedList_shift_head.shiftHead());
+            console.log('Linked list', linkedList_shift_head.traverse());
+            break;
+        case '9':
+            let linkedList_unshift_head = new SinglyLinkedList();
+            console.log(linkedList_unshift_head.push('Hello'));
+            console.log(linkedList_unshift_head.push(1));
+            console.log(linkedList_unshift_head.push(true));
+            linkedList_unshift_head.unShiftHead('Goodbye');
+            console.log('Linked list', linkedList_unshift_head.traverse());
+            break;
+        case '10':
+            let linkedList_get = new SinglyLinkedList();
+            console.log(linkedList_get.push('Hello'));
+            console.log(linkedList_get.push(1));
+            console.log(linkedList_get.push(true));
+            console.log('Element at position 2', linkedList_get.getByIndex(2));
+            console.log('Element at position 10', linkedList_get.getByIndex(10));
+            break;
+        case '11':
+            let linkedList_set = new SinglyLinkedList();
+            console.log(linkedList_set.push('Hello'));
+            console.log(linkedList_set.push(1));
+            console.log(linkedList_set.push(true));
+            console.log('Linked list', linkedList_set.traverse());
+            console.log('Setting element at position 2', linkedList_set.setByIndex(2, 'newValue'));
+            console.log('Linked list', linkedList_set.traverse());
+            break;
+        case '12':
+            let linkedList_insert = new SinglyLinkedList();
+            console.log(linkedList_insert.push('Hello'));
+            console.log(linkedList_insert.push(1));
+            console.log(linkedList_insert.push(true));
+            console.log('Linked list', linkedList_insert.traverse());
+            console.log('Inserting element at position 2', linkedList_insert.insert(2, 'newValue'));
+            console.log('Linked list', linkedList_insert.traverse());
+            console.log('Inserting element at position 0', linkedList_insert.insert(0, 'newValue'));
+            console.log('Linked list', linkedList_insert.traverse());
+            console.log('Inserting element at position 5', linkedList_insert.insert(5, 'newValue'));
+            console.log('Linked list', linkedList_insert.traverse());
+            break;
         default:
+            console.log('Invalid selection')
             break;
     }
 
