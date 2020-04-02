@@ -1,7 +1,7 @@
 import { DataNode } from "./Node";
 
 export class SinglyLinkedList {
-    
+
     head: DataNode;
     tail: DataNode;
     length: number;
@@ -15,7 +15,7 @@ export class SinglyLinkedList {
     traverse(): any[] {
         let values = [];
         let current = this.head;
-        while(current){
+        while (current) {
             values.push(current.value);
             current = current.next;
         }
@@ -89,12 +89,12 @@ export class SinglyLinkedList {
     }
 
     getByIndex(index: number): any {
-        if(index < 0 || index > this.length || !this.head)
+        if (index < 0 || index > this.length || !this.head)
             return undefined;
 
         let current = this.head;
 
-        while(index > 0){
+        while (index > 0) {
             current = current.next;
             index--;
         }
@@ -104,7 +104,7 @@ export class SinglyLinkedList {
 
     setByIndex(index: number, newValue: string): any {
         let found = this.getByIndex(index);
-        if(found){
+        if (found) {
             found.value = newValue;
             return true;
         }
@@ -113,16 +113,16 @@ export class SinglyLinkedList {
     }
 
     insert(index: number, value: string): any {
-        
-        if(index < 0 || index > this.length || !this.head)
+
+        if (index < 0 || index > this.length || !this.head)
             return false;
 
-        if(index === 0){
+        if (index === 0) {
             this.unShiftHead(value);
             return true;
         }
-    
-        if(index === this.length){
+
+        if (index === this.length) {
             this.push(value);
             return true;
         }
@@ -136,5 +136,42 @@ export class SinglyLinkedList {
 
         this.length++;
         return true;
+    }
+
+    remove(index: number): any {
+
+        if (index < 0 || index > this.length)
+            return undefined;
+
+        if (index === 0)
+            return this.shiftHead();
+
+        if (index === this.length)
+            return this.pop();
+
+        let previous = this.getByIndex(index - 1);
+        let current = this.getByIndex(index);
+        let next = this.getByIndex(index + 1);
+
+        previous.next = next;
+        this.length--;
+
+        return current;
+    }
+
+    reverse() {
+        let node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+
+        let next, previous = null;
+        for (var i = 0; i < this.length; i++) {
+            next = node.next;
+            node.next = previous;
+            previous = node;
+            node = next;
+        }
+
+        return this;
     }
 }

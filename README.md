@@ -44,9 +44,10 @@ Note- One variation, for above implementation space complexity is O(n). To avoid
 ### Linear search
 1. Loop through all the elements, compare each element.
 
-(Skipping for now, we'll come back to this)
+**(Skipping for now, we'll come back to this)**
 
 ### Linked lists
+
 1. Linked lists are like stairs and Arrays are like a lift. In array(lift) you can say take me to 5th floor, and it will directly take you there, but in linked list, you have to traverse like a stair, first floor, then second, then third, fourth, then fifth.
 2. There is no index. Linked lists is a bunch of nodes, holding each other.
 3. Linked list have only 3 properties, head tail and length.
@@ -124,3 +125,48 @@ Note- One variation, for above implementation space complexity is O(n). To avoid
     6. Set the next property on the new node to be the previous next
     7. Increment the length
     8. Return true
+
+    #### Remove
+    1. If the index is less than zero or greater than the length, return undefined
+    2. If the index is the same as the length-1, pop
+    3. If the index is 0, shift
+    4. Otherwise, using the get method, access the node at the index - 1
+    5. Set the next property on that node to be the next of the next node
+    6. Decrement the length
+    7. Return the value of the node removed
+
+    #### In-place Reverse
+    ```
+        node = this.head
+        previous = null
+        next = null
+
+          100      101     102     103     104
+    1.    node     next
+    2.    prev     node    next
+    3.             prev    node    next
+    4.                     prev    node   next
+    5.                             prev   node   next    
+    
+        loop{
+            next = node.next
+            node.next = prev
+            node = next
+            prev = node
+        }
+    ```
+
+### Doubly linked list
+
+**We'll come back to this section, skipping for now**
+
+### Stacks and Queues
+
+A LIFO data structure! The last element added to the stack will be the first element removed from the stack, like a pile of books.
+
+Stacks are use in - 
+1. Managing function invocations
+2. Undo / Redo
+3. Routing in web frameworks. All visited addresses are maintained on stack. The return URL is the top item on stack.
+
+

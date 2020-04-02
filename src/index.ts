@@ -18,14 +18,19 @@ const question = `Which program you want to run?
                     3. Find the number of unique elements in an array
                     4. Find the maximum sum of N consecutive elements in an array
                     5. Helper method recursion. Get odd numbers.
-                    6. Singly_Linked_List - push value.
-                    7. Singly_Linked_List - pop value
-                    8. Singly_Linked_List - shift head and get it.
-                    9. Singly_Linked_List - Un-Shift head.
-                    10. Singly_Linked_List - Get by index.
-                    11. Singly_Linked_List - Set by index.
-                    12. Singly_Linked_List - Insert at given index.
-                    \n`;
+                    Singly_Linked_List - 
+                        6.  Push value.
+                        7.  Pop value
+                        8.  Shift head and get it.
+                        9.  Un-Shift head.
+                        10. Get by index.
+                        11. Set by index.
+                        12. Insert at given index.
+                        13. Remove at given index.
+                        14. In-place reversal.
+                    Stack - 
+                        1. 
+                        \n`;
 rl.question(question, (answer) => {
 
     switch (answer) {
@@ -109,6 +114,32 @@ rl.question(question, (answer) => {
             console.log('Linked list', linkedList_insert.traverse());
             console.log('Inserting element at position 5', linkedList_insert.insert(5, 'newValue'));
             console.log('Linked list', linkedList_insert.traverse());
+            break;
+        case '13':
+            let linkedList_remove = new SinglyLinkedList();
+            console.log(linkedList_remove.push('Hello'));
+            console.log(linkedList_remove.push(1));
+            console.log(linkedList_remove.push(true));
+            console.log(linkedList_remove.push('newvalue4'));
+            console.log(linkedList_remove.push('newvalue5'));
+            console.log('Linked list', linkedList_remove.traverse());
+            console.log('Removing element at position 2', linkedList_remove.remove(2));
+            console.log('Linked list', linkedList_remove.traverse());
+            console.log('Removing element at position 0', linkedList_remove.remove(0));
+            console.log('Linked list', linkedList_remove.traverse());
+            console.log('Removing last element', linkedList_remove.remove(linkedList_remove.length));
+            console.log('Linked list', linkedList_remove.traverse());
+            break;
+        case '14':
+            let linkedList_reverse = new SinglyLinkedList();
+            console.log(linkedList_reverse.push('Hello'));
+            console.log(linkedList_reverse.push(1));
+            console.log(linkedList_reverse.push(true));
+            console.log(linkedList_reverse.push('newvalue4'));
+            console.log(linkedList_reverse.push('newvalue5'));
+            console.log('Linked list', linkedList_reverse.traverse());
+            linkedList_reverse.reverse();
+            console.log('Linked list', linkedList_reverse.traverse());
             break;
         default:
             console.log('Invalid selection')
