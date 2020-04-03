@@ -5,6 +5,8 @@ import { slidingWindowPattern } from "./slidingWindow";
 import { helperMethodRecursion } from "./helperMethod_recursion";
 import { SinglyLinkedList } from "./Linked_lists/SinglyLinkedList";
 import { Stack } from "./Stack/Stack";
+import { Queue } from "./Queue/Queue";
+import { BinarySearchTree } from "./Trees/BinarySearchTree";
 
 const readline = require('readline');
 
@@ -32,6 +34,12 @@ const question = `Which program you want to run?
                     Stack - 
                         15. Push
                         16. Pop
+                    Queue - 
+                        17. Enqueue
+                        18. Dequeue
+                    Binary Search Trees - 
+                        19. Insert a new node iteratively
+                        20. Insert a new node recursively
                         \n`;
 rl.question(question, (answer) => {
 
@@ -64,10 +72,10 @@ rl.question(question, (answer) => {
             console.log(linkedList_pop.push(1));
             console.log(linkedList_pop.push(true));
             console.log('Linked list', linkedList_pop.traverse());
-            console.log('Poped element', linkedList_pop.pop());
-            console.log('Poped element', linkedList_pop.pop());
+            console.log('Popped element', linkedList_pop.pop());
+            console.log('Popped element', linkedList_pop.pop());
             console.log('Linked list', linkedList_pop.traverse());
-            console.log('Poped element', linkedList_pop.pop());
+            console.log('Popped element', linkedList_pop.pop());
             console.log('Linked list', linkedList_pop.traverse());
             break;
         case '8':
@@ -144,12 +152,67 @@ rl.question(question, (answer) => {
             console.log('Linked list', linkedList_reverse.traverse());
             break;
         case '15':
-            let stack = new Stack();
-            stack.push(1);
-            stack.push(2);
-            stack.push(3);
-            stack.push(4);
-            console.log('Stack - ', stack.traverse());
+            let stack_push = new Stack();
+            stack_push.push(1);
+            stack_push.push(2);
+            stack_push.push(3);
+            stack_push.push(4);
+            console.log('Stack - ', stack_push.traverse());
+            break;
+        case '16':
+            let stack_pop = new Stack();
+            stack_pop.push(1);
+            stack_pop.push(2);
+            stack_pop.push(3);
+            stack_pop.push(4);
+            console.log('Stack - ', stack_pop.traverse());
+            console.log('Popped element', stack_pop.pop());
+            console.log('Popped element', stack_pop.pop());
+            console.log('Stack - ', stack_pop.traverse());
+            break;
+        case '17':
+            let q_enqueue = new Queue();
+            q_enqueue.enqueue(1);
+            console.log('Queue - ', q_enqueue.traverse());
+            q_enqueue.enqueue(2);
+            console.log('Queue - ', q_enqueue.traverse());
+            q_enqueue.enqueue(3);
+            console.log('Queue - ', q_enqueue.traverse());
+            q_enqueue.enqueue(4);
+            console.log('Queue - ', q_enqueue.traverse());
+            break;
+        case '18':
+            let q_dequeue = new Queue();
+            q_dequeue.enqueue(1);
+            q_dequeue.enqueue(2);
+            q_dequeue.enqueue(3);
+            q_dequeue.enqueue(4);
+            console.log('Queue - ', q_dequeue.traverse());
+            console.log('Dequeued element', q_dequeue.dequeue());
+            console.log('Dequeued element', q_dequeue.dequeue());
+            console.log('Queue - ', q_dequeue.traverse());
+            break;
+        case '19':
+            let bst_insert_iteratively = new BinarySearchTree();
+            bst_insert_iteratively.insertIteratively(10);
+            bst_insert_iteratively.insertIteratively(5);
+            bst_insert_iteratively.insertIteratively(15);
+            bst_insert_iteratively.insertIteratively(11);
+            bst_insert_iteratively.insertIteratively(16);
+            bst_insert_iteratively.insertIteratively(3);
+            bst_insert_iteratively.insertIteratively(7);
+            console.log('Tree structure', bst_insert_iteratively);
+            break;
+        case '20':
+            let bst_insert_recursively = new BinarySearchTree();
+            bst_insert_recursively.insertRecursively(10);
+            bst_insert_recursively.insertRecursively(5);
+            bst_insert_recursively.insertRecursively(15);
+            bst_insert_recursively.insertRecursively(11);
+            bst_insert_recursively.insertRecursively(16);
+            bst_insert_recursively.insertRecursively(3);
+            bst_insert_recursively.insertRecursively(7);
+            console.log('Tree structure', bst_insert_recursively);
             break;
         default:
             console.log('Invalid selection')

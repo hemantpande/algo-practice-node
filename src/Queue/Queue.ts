@@ -1,47 +1,44 @@
 import { DataNode } from "../Linked_lists/Node";
 
-export class Stack{
-    
+export class Queue {
     first: DataNode;
     last: DataNode;
     length: number;
 
-    constructor(){
+    constructor() {
         this.first = null;
         this.last = null;
         this.length = 0;
     }
 
-    push(value: number) {
-        
-        let node = new DataNode(value);
-        if(this.length === 0){
-            this.first = node;
-            this.last = node;
-        }else{
-            let currentFirst = this.first;
-            this.first = node;    
-            this.first.next = currentFirst;
+    enqueue(value: number) {
+        let newNode = new DataNode(value);
+        if (this.length === 0) {
+            this.first = newNode;
+            this.last = newNode;
+        } else {
+            this.last.next = newNode;
+            this.last = newNode;
         }
-        
+
         this.length++;
-        
-        return this;
     }
 
-    pop(): any {
-        if(this.length === 0)
+    dequeue(): number {
+
+        if (this.length === 0)
             return null;
 
-        let currentFirst = this.first;   
-        if(this.first == this.last){
+        let currentFirst = this.first;
+        if (this.first === this.last) {
             this.first = null;
             this.last = null;
-        }else{
+        } else {
             this.first = this.first.next;
         }
 
         this.length--;
+
         return currentFirst.value;
     }
 
@@ -55,4 +52,5 @@ export class Stack{
 
         return values;
     }
+
 }
