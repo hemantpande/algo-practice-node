@@ -4,6 +4,7 @@ import { multipleCounterPattern_unique_elements } from "./multiplePointers_uniqu
 import { slidingWindowPattern } from "./slidingWindow";
 import { helperMethodRecursion } from "./helperMethod_recursion";
 import { SinglyLinkedList } from "./Linked_lists/SinglyLinkedList";
+import { Stack } from "./Stack/Stack";
 
 const readline = require('readline');
 
@@ -29,7 +30,8 @@ const question = `Which program you want to run?
                         13. Remove at given index.
                         14. In-place reversal.
                     Stack - 
-                        1. 
+                        15. Push
+                        16. Pop
                         \n`;
 rl.question(question, (answer) => {
 
@@ -140,6 +142,14 @@ rl.question(question, (answer) => {
             console.log('Linked list', linkedList_reverse.traverse());
             linkedList_reverse.reverse();
             console.log('Linked list', linkedList_reverse.traverse());
+            break;
+        case '15':
+            let stack = new Stack();
+            stack.push(1);
+            stack.push(2);
+            stack.push(3);
+            stack.push(4);
+            console.log('Stack - ', stack.traverse());
             break;
         default:
             console.log('Invalid selection')
