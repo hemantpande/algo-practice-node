@@ -40,6 +40,13 @@ const question = `Which program you want to run?
                     Binary Search Trees - 
                         19. Insert a new node iteratively
                         20. Insert a new node recursively
+                        21. Find iteratively
+                        22. Find recursively
+                    Binary tree traversals - 
+                        23. Breadth first search
+                        24. Depth first search - Pre-order
+                        25. Depth first search - Post-order
+                        26. Depth first search - In-order
                         \n`;
 rl.question(question, (answer) => {
 
@@ -213,6 +220,75 @@ rl.question(question, (answer) => {
             bst_insert_recursively.insertRecursively(3);
             bst_insert_recursively.insertRecursively(7);
             console.log('Tree structure', bst_insert_recursively);
+            break;
+        case '21':
+            let bst_find_iteratively = new BinarySearchTree();
+            bst_find_iteratively.insertIteratively(10);
+            bst_find_iteratively.insertIteratively(5);
+            bst_find_iteratively.insertIteratively(15);
+            bst_find_iteratively.insertIteratively(11);
+            bst_find_iteratively.insertIteratively(16);
+            bst_find_iteratively.insertIteratively(3);
+            bst_find_iteratively.insertIteratively(7);
+            console.log('Tree structure', bst_find_iteratively);
+            console.log('Finding 16 iteratively...', bst_find_iteratively.findIteratively(16));
+            break;
+        case '22':
+            let bst_find_recursively = new BinarySearchTree();
+            bst_find_recursively.insertIteratively(10);
+            bst_find_recursively.insertIteratively(5);
+            bst_find_recursively.insertIteratively(15);
+            bst_find_recursively.insertIteratively(11);
+            bst_find_recursively.insertIteratively(16);
+            bst_find_recursively.insertIteratively(3);
+            bst_find_recursively.insertIteratively(7);
+            console.log('Tree structure', bst_find_recursively);
+            console.log('Finding 16 recursively...', bst_find_recursively.findRecursively(16));
+            console.log('Finding 7 recursively...', bst_find_recursively.findRecursively(7));
+            break;
+        case '23':
+            let breadth_first_search = new BinarySearchTree();
+            breadth_first_search.insertIteratively(10);
+            breadth_first_search.insertIteratively(6);
+            breadth_first_search.insertIteratively(15);
+            breadth_first_search.insertIteratively(3);
+            breadth_first_search.insertIteratively(8);
+            breadth_first_search.insertIteratively(20);
+            console.log('Tree structure', breadth_first_search);
+            console.log('Breadth first search - ', breadth_first_search.breadthFirstSearch());
+            break;
+        case '24':
+            let depth_first_search_pre_order = new BinarySearchTree();
+            depth_first_search_pre_order.insertIteratively(10);
+            depth_first_search_pre_order.insertIteratively(6);
+            depth_first_search_pre_order.insertIteratively(15);
+            depth_first_search_pre_order.insertIteratively(3);
+            depth_first_search_pre_order.insertIteratively(8);
+            depth_first_search_pre_order.insertIteratively(20);
+            console.log('Tree structure', depth_first_search_pre_order);
+            console.log('Depth first search - Pre-order - ', depth_first_search_pre_order.depthFirstSearch_preOrder());
+            break;
+        case '25':
+            let depth_first_search_post_order = new BinarySearchTree();
+            depth_first_search_post_order.insertIteratively(10);
+            depth_first_search_post_order.insertIteratively(6);
+            depth_first_search_post_order.insertIteratively(15);
+            depth_first_search_post_order.insertIteratively(3);
+            depth_first_search_post_order.insertIteratively(8);
+            depth_first_search_post_order.insertIteratively(20);
+            console.log('Tree structure', depth_first_search_post_order);
+            console.log('Depth first search - Post-order - ', depth_first_search_post_order.depthFirstSearch_postOrder());
+            break;
+        case '26':
+            let depth_first_search_in_order = new BinarySearchTree();
+            depth_first_search_in_order.insertIteratively(10);
+            depth_first_search_in_order.insertIteratively(6);
+            depth_first_search_in_order.insertIteratively(15);
+            depth_first_search_in_order.insertIteratively(3);
+            depth_first_search_in_order.insertIteratively(8);
+            depth_first_search_in_order.insertIteratively(20);
+            console.log('Tree structure', depth_first_search_in_order);
+            console.log('Depth first search - In-order - ', depth_first_search_in_order.depthFirstSearch_inOrder());
             break;
         default:
             console.log('Invalid selection')

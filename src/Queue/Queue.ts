@@ -11,7 +11,7 @@ export class Queue {
         this.length = 0;
     }
 
-    enqueue(value: number) {
+    enqueue(value: any) {
         let newNode = new DataNode(value);
         if (this.length === 0) {
             this.first = newNode;
@@ -24,7 +24,7 @@ export class Queue {
         this.length++;
     }
 
-    dequeue(): number {
+    dequeue(): any {
 
         if (this.length === 0)
             return null;
