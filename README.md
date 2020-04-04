@@ -482,6 +482,11 @@ This is an interesting output. We have tuples here of (Parent, left, right), wit
 **Iteration 5**:
 ![Iteration 5](./resources/DFS_in_order_iteration_5.png)
 
+### BFS vs DFS
 
+1. Time complexity is same for both. 
+2. If the tree is completely filled, and wide, and deep, then BFS will have more space complexity, since we maintain a queue. Ultimately, the queue will be 0, but it can hold lot of elements while running. 
 
+### In-order vs Pre-order vs Post-order
+1. If you want a sorted array then In-order is useful. 
 
