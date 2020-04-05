@@ -7,6 +7,7 @@ import { SinglyLinkedList } from "./Linked_lists/SinglyLinkedList";
 import { Stack } from "./Stack/Stack";
 import { Queue } from "./Queue/Queue";
 import { BinarySearchTree } from "./Trees/BinarySearchTree";
+import { MaxBinaryHeap } from "./Heap/MaxBinaryHeap";
 
 const readline = require('readline');
 
@@ -47,6 +48,9 @@ const question = `Which program you want to run?
                         24. Depth first search - Pre-order
                         25. Depth first search - Post-order
                         26. Depth first search - In-order
+                    Binary Heaps
+                        27. Insert an element
+                        28. Remove an element 
                         \n`;
 rl.question(question, (answer) => {
 
@@ -289,6 +293,48 @@ rl.question(question, (answer) => {
             depth_first_search_in_order.insertIteratively(20);
             console.log('Tree structure', depth_first_search_in_order);
             console.log('Depth first search - In-order - ', depth_first_search_in_order.depthFirstSearch_inOrder());
+            break;
+        case '27':
+            let binaryHeap_insert = new MaxBinaryHeap();
+            binaryHeap_insert.insert(41);
+            console.log('Heap structure', binaryHeap_insert.elements);
+            binaryHeap_insert.insert(39);
+            console.log('Heap structure', binaryHeap_insert.elements);
+            binaryHeap_insert.insert(33);
+            console.log('Heap structure', binaryHeap_insert.elements);
+            binaryHeap_insert.insert(18);
+            console.log('Heap structure', binaryHeap_insert.elements);
+            binaryHeap_insert.insert(27);
+            console.log('Heap structure', binaryHeap_insert.elements);
+            binaryHeap_insert.insert(12);
+            console.log('Heap structure', binaryHeap_insert.elements);
+            binaryHeap_insert.insert(55);
+            console.log('Heap structure', binaryHeap_insert.elements);
+            binaryHeap_insert.insert(1);
+            console.log('Heap structure', binaryHeap_insert.elements);
+            binaryHeap_insert.insert(45);
+            console.log('Heap structure', binaryHeap_insert.elements);
+            break;
+        case '28':
+            let binaryHeap_remove = new MaxBinaryHeap();
+            binaryHeap_remove.insert(41);
+            console.log('Heap structure', binaryHeap_remove.elements);
+            binaryHeap_remove.insert(39);
+            console.log('Heap structure', binaryHeap_remove.elements);
+            binaryHeap_remove.insert(33);
+            console.log('Heap structure', binaryHeap_remove.elements);
+            binaryHeap_remove.insert(18);
+            console.log('Heap structure', binaryHeap_remove.elements);
+            binaryHeap_remove.insert(27);
+            console.log('Heap structure', binaryHeap_remove.elements);
+            binaryHeap_remove.insert(12);
+            console.log('Heap structure', binaryHeap_remove.elements);
+            binaryHeap_remove.insert(55);
+            console.log('Heap structure', binaryHeap_remove.elements);
+            console.log('Max', binaryHeap_remove.extractMax());
+            console.log('Heap structure', binaryHeap_remove.elements);
+            console.log('Max', binaryHeap_remove.extractMax());
+            console.log('Heap structure', binaryHeap_remove.elements);
             break;
         default:
             console.log('Invalid selection')
