@@ -54,7 +54,8 @@ const question = `Which program you want to run?
                         28. Remove an element 
                     Hash tables
                         29. Insert an element
-                        30. Find an element
+                        30. Set using Separate chaining
+                        31. Get using Separate chaining
                         \n`;
 rl.question(question, (answer) => {
 
@@ -342,10 +343,29 @@ rl.question(question, (answer) => {
             break;
         case '29':
             let hashTable = new HashTable();
-            console.log(hashTable.insert('orange', 15));
-            console.log(hashTable.insert('red', 15));
-            console.log(hashTable.insert('green', 15));
-        break;
+            console.log(hashTable.trivialSet('orange', 15));
+            console.log(hashTable.trivialSet('red', 15));
+            console.log(hashTable.trivialSet('green', 15));
+            break;
+        case '30':
+            let hashTable_set = new HashTable(4);
+            hashTable_set.set("i love", "french fries");
+            hashTable_set.set("hi", "goodbye");
+            hashTable_set.set("magnificant", "taj mahal");
+            hashTable_set.set("go corona", "go");
+            hashTable_set.set("i have", "cats");
+            console.log('hashTable.keyMap', hashTable_set.keyMap);
+            break;
+        case '31':
+            let hashTable_get = new HashTable(4);
+            hashTable_get.set("i love", "french fries");
+            hashTable_get.set("hi", "goodbye");
+            hashTable_get.set("magnificant", "taj mahal");
+            hashTable_get.set("go corona", "go");
+            hashTable_get.set("i have", "cats");
+            console.log('hashTable.keyMap', hashTable_get.keyMap);
+            console.log('get - i have', hashTable_get.get("i have"));
+            break;
         default:
             console.log('Invalid selection')
             break;

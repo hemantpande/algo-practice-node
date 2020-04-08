@@ -250,6 +250,8 @@ And then simply pop from beginning.
 
 A data structure that consists of nodes in a parent / child relationshipIf we think. Linked list if the special type of tree.
 
+Tree can also represented as a Graph, where there exists only one path to navigate between 2 nodes.
+
 #### Terminology - 
 **Root** - The top node in a tree.
 **Child** -A node directly connected to another node when moving away from the Root.
@@ -631,4 +633,81 @@ Below are the characteristics of a HASH FUNCTION -
 
 Prime numbers are good friends of hash functions. They help in uniform distribution of hashes. This is a research topic.
 
-When hash functions 
+When hash functions produce same index for 2 or more different set of inputs, it leads to **Collisions**.
+
+There are 2 ways to address collisions:
+1. Linear probing.
+2. Separate chaining.
+
+#### Separate chaining
+
+With separate chaining, at each index in our array we store values using a more sophisticated data structure (e.g. an array or a linked list).
+
+This allows us to store multiple key-value pairs at the same index.
+
+![Separate chaining](./resources/separate_chaining_1.png)
+
+![Separate chaining](./resources/separate_chaining_2.png)
+
+![Separate chaining](./resources/separate_chaining_3.png)
+
+![Separate chaining](./resources/separate_chaining_4.png)
+
+#### Operations with separate chaining
+
+1. set
+    - Accepts a key and a value
+    - Hashes the key
+    - Stores the key-value pair in the hash table array via separate chaining
+2. get
+    - Accepts a key
+    - Hashes the key
+    - Retrieves the key-value pair in the hash table
+    - If the key isn't found, returns undefined
+
+#### Linear probing
+
+With linear probing, when we find a collision, we search through the array to find the next empty slot.
+
+Unlike with separate chaining, this allows us to store a single key-value at each index.
+
+![Linear probing](./resources/linear_probing.png)
+
+### Graphs
+
+A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph.
+
+Basically, it's just a collection of nodes and connections.
+
+Used in - 
+1. Social Networks
+2. Location / Mapping
+3. Routing Algorithms
+4. Visual Hierarchy
+5. File System Optimizations
+6. EVERYWHERE!
+
+#### Terminology
+
+**Vertex** - a node
+**Edge** - connection between nodes
+**Weighted/Unweighted** - values assigned to distances between vertices
+**Directed/Undirected** - directions assigned to distanced between vertices
+
+#### Undirected Graphs
+
+In undirected graphs, there is no polarity to edges. For example, Facebook. If 2 people are friends, they both share each others content, it's mutual.
+
+![Undirected graph](./resources/undirected_graph.png)
+
+#### Directed graph
+
+In directed graphs, there is a direction associated between any two connected nodes. In below diagram, A and B are connected, we can go from B to A, **but not vice-versa**.
+
+![Directed graph](./resources/directed_graph.png)
+
+For example, Instagram or Twitter. People follow others, but the people they follow, might not follow them back.
+
+![Directed graph](./resources/directed_graph_2.png)
+
+**Facebook is a undirected graph, Instagram, Twitter are directed graphs**
