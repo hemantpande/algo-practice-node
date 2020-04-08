@@ -7,10 +7,9 @@
 
 export function frequencyCounterPattern(array1: number[], array2: number[]) {
 
-    console.log('Better approach - ' + betterApproach(array1, array2));
-
     console.log('Brute force - ' + bruteForce(array1, array2));
-        
+
+    console.log('Better approach - ' + betterApproach(array1, array2));
 }
 
 function bruteForce(array1, array2) {
@@ -35,7 +34,7 @@ function betterApproach(array1: number[], array2: number[]) {
     let array2Frequency = getElementFrequencies(array2); // O(n)
 
     for (let [key, value] of array1Frequency.entries()) {
-        if(!(array2Frequency.get(key * key) && array2Frequency.get(key*key) == value)){
+        if (!(array2Frequency.get(key * key) && array2Frequency.get(key * key) == value)) {
             return false;
         }
     }

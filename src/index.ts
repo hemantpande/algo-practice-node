@@ -1,13 +1,14 @@
-import { frequencyCounterPattern } from "./arrayMatcher";
-import { multipleCounterPattern_pair_with_sum_zero } from "./multiplePointers_PairWithSumZero";
-import { multipleCounterPattern_unique_elements } from "./multiplePointers_uniqueElements";
-import { slidingWindowPattern } from "./slidingWindow";
-import { helperMethodRecursion } from "./helperMethod_recursion";
+import { frequencyCounterPattern } from "./Patterns/arrayMatcher";
+import { multipleCounterPattern_pair_with_sum_zero } from "./Patterns/multiplePointers_PairWithSumZero";
+import { multipleCounterPattern_unique_elements } from "./Patterns/multiplePointers_uniqueElements";
+import { slidingWindowPattern } from "./Patterns/slidingWindow";
+import { helperMethodRecursion } from "./Patterns/helperMethod_recursion";
 import { SinglyLinkedList } from "./Linked_lists/SinglyLinkedList";
 import { Stack } from "./Stack/Stack";
 import { Queue } from "./Queue/Queue";
 import { BinarySearchTree } from "./Trees/BinarySearchTree";
 import { MaxBinaryHeap } from "./Heap/MaxBinaryHeap";
+import { HashTable } from "./HashTable/HashTable";
 
 const readline = require('readline');
 
@@ -51,6 +52,9 @@ const question = `Which program you want to run?
                     Binary Heaps
                         27. Insert an element
                         28. Remove an element 
+                    Hash tables
+                        29. Insert an element
+                        30. Find an element
                         \n`;
 rl.question(question, (answer) => {
 
@@ -336,6 +340,12 @@ rl.question(question, (answer) => {
             console.log('Max', binaryHeap_remove.extractMax());
             console.log('Heap structure', binaryHeap_remove.elements);
             break;
+        case '29':
+            let hashTable = new HashTable();
+            console.log(hashTable.insert('orange', 15));
+            console.log(hashTable.insert('red', 15));
+            console.log(hashTable.insert('green', 15));
+        break;
         default:
             console.log('Invalid selection')
             break;

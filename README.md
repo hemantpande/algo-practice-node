@@ -600,3 +600,35 @@ Priority queues are commonly implemented using Binary Heaps (min or max, doesn't
 Basically the idea is that each element has a priority. Elements with higher priorities are served before elements with lower priorities. And the element with highest priority is always maintained at the Root. So when we want to serve (ExtractMax) we just do it using extractMax and re-balance the tree.
 
 Naive approaches using linked list or array are O(n), however, using Binary heaps, it is always O(log(n)).
+
+For implementing 'Priority queue' using Binary heap, we do operations on an object instead of number. The object has a Priority field, which is used in Insert() and extractMax() operations.
+
+### Hash tables
+
+Hash tables are used to store key-value pairs. They are like arrays, but the keys are not ordered.
+
+Unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, and removing values!
+
+Nearly every programming language has some sort of hash table data structure. Because of their speed, hash tables are very commonly used!
+
+Hash tables maps keys to objects. The underlying data structures in a has table is an array. When we pass in a key to a has table, it converts that key into an index that can be used to access the object which is stored in the array.
+
+![Hash tables](./resources/hash_tables_1.png)
+
+![Hash tables](./resources/hash_tables_2.png)
+
+![Hash tables](./resources/hash_tables_3.png)
+
+![Hash tables](./resources/hash_tables_4.png)
+
+The important key here is the **HASH FUNCTION** which translates a key into an index, during retrievel and insert.
+
+Below are the characteristics of a HASH FUNCTION - 
+
+1. Fast (i.e. constant time)
+2. Doesn't cluster outputs at specific indices, but distributes uniformly
+3. Deterministic (same input yields same output)
+
+Prime numbers are good friends of hash functions. They help in uniform distribution of hashes. This is a research topic.
+
+When hash functions 
