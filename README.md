@@ -2,6 +2,7 @@
 
 ### How to run the solution?
 `npm start` and select the program you want to run.
+`npm test` to run all tests.
 
 ## Basics
 
@@ -711,3 +712,58 @@ For example, Instagram or Twitter. People follow others, but the people they fol
 ![Directed graph](./resources/directed_graph_2.png)
 
 **Facebook is a undirected graph, Instagram, Twitter are directed graphs**
+
+#### Weighted graph
+
+Weighted graph is the one in which each edge has a weight associated with it.
+
+![Weighted graph](./resources/weighted_graph.png)
+
+#### Un-Weighted graph
+
+As the name suggests, the edges do not have a weight associated.
+
+### How do we represent information in graphs?
+
+#### Adjacency Matrix
+
+![Adjacency Matrix](./resources/adjacency_matrix.png)
+
+**1** - Represents a connection between any two nodes.
+**0** - Represents no connection.
+
+**A - B** is 1
+**B - A** is also 1, representing that this is an undirected graph. **Directed graph will not necessarly have a connection both ways.**
+
+#### Adjacency list
+
+![Adjacency list](resources/adjacency_list.png)
+
+If we want to find the nodes connected to node 3 for example, 
+- we can go to the 3rd index
+- there we can find the nodes connected to 3.
+
+This implementation was easy, but it has flaws:-
+1. It worked well, since the nodes were numbers, but they could be anything, strings, letters, complex objects.
+2. Even for number implementation, if there are huge gaps in numbers, we will have a lot of empty elements in the array/list.
+
+##### Better approach
+
+![Adjacency list](./resources/adjacency_list_2.png)
+
+Adjaency list can take advantage of **hash table**, by storing 
+- the value of node as a key 
+- and connected nodes as value of hash table.
+
+In this example, we look for "A", and that gives us the nodes connected to "A".
+
+#### Big O comparison of Adjacency matrix and Adjacency list.
+
+![Graphs Big O](./resources/graphs_big_O.png)
+
+- For Adding a new node, we need to add a new row and new column to Adjacency Matrix, it is therefore O(V^2), since it is a 2-dimentional structure.
+- Whereas for adjacency list, it's just adding a new key-value pair.
+
+More key diffrences below - 
+
+![Differences](resources/adjacency_matrix_vs_list.png)

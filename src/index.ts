@@ -9,6 +9,7 @@ import { Queue } from "./Queue/Queue";
 import { BinarySearchTree } from "./Trees/BinarySearchTree";
 import { MaxBinaryHeap } from "./Heap/MaxBinaryHeap";
 import { HashTable } from "./HashTable/HashTable";
+import { Graph } from "./Graphs/Graphs";
 
 const readline = require('readline');
 
@@ -56,6 +57,8 @@ const question = `Which program you want to run?
                         29. Insert an element
                         30. Set using Separate chaining
                         31. Get using Separate chaining
+                    Graphs
+                        32. Add vertex
                         \n`;
 rl.question(question, (answer) => {
 
@@ -365,6 +368,10 @@ rl.question(question, (answer) => {
             hashTable_get.set("i have", "cats");
             console.log('hashTable.keyMap', hashTable_get.keyMap);
             console.log('get - i have', hashTable_get.get("i have"));
+            break;
+        case '32':
+            let graph_add_vertex = new Graph();
+            console.log('Adjacency list', graph_add_vertex.addVertex('A'));
             break;
         default:
             console.log('Invalid selection')

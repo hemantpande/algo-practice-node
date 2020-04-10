@@ -14,7 +14,7 @@ export class HashTable {
         return index;
     }
 
-    set(key: string, value: string) {
+    set(key: string, value: any) {
         let index = this.hash(key, this.keyMap.length);
         console.log(key, index);
         if (!this.keyMap[index]) {
@@ -24,7 +24,7 @@ export class HashTable {
         this.keyMap[index].push([key, value]);
     }
 
-    get(key: string): string {
+    get(key: string): any {
         let index = this.hash(key, this.keyMap.length);
         console.log('index', index);
         console.log('this.keyMap[index]', this.keyMap[index]);
