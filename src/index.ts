@@ -18,12 +18,13 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-const question = `Which program you want to run? 
-                    1. Find if 1 array is square of the other
-                    2. Find the first pair whose sum is 0
-                    3. Find the number of unique elements in an array
-                    4. Find the maximum sum of N consecutive elements in an array
-                    5. Helper method recursion. Get odd numbers.
+const question = `Which program you want to run?
+                    Patterns
+                        1. Find if 1 array is square of the other
+                        2. Find the first pair whose sum is 0
+                        3. Find the number of unique elements in an array
+                        4. Find the maximum sum of N consecutive elements in an array
+                        5. Helper method recursion. Get odd numbers.
                     Singly_Linked_List - 
                         6.  Push value.
                         7.  Pop value
@@ -59,6 +60,11 @@ const question = `Which program you want to run?
                         31. Get using Separate chaining
                     Graphs
                         32. Add vertex
+                        33. Add edge
+                        34. Remove edge
+                        35. Remove vertex
+                        36. Depth first search - recursive
+                        37. Depth first search - iterative
                         \n`;
 rl.question(question, (answer) => {
 
@@ -372,6 +378,75 @@ rl.question(question, (answer) => {
         case '32':
             let graph_add_vertex = new Graph();
             console.log('Adjacency list', graph_add_vertex.addVertex('A'));
+            console.log('Adjacency list', graph_add_vertex.addVertex('B'));
+            break;
+        case '33':
+            let graph_add_edge = new Graph();
+            console.log('Adjacency list', graph_add_edge.addVertex('Tokyo'));
+            console.log('Adjacency list', graph_add_edge.addVertex('Dallas'));
+            console.log('Adjacency list', graph_add_edge.addVertex('Aspen'));
+            console.log('Adjacency list', graph_add_edge.addEdge('Tokyo', 'Dallas'));
+            console.log('Adjacency list', graph_add_edge.addEdge('Dallas', 'Aspen'));
+            break;
+        case '34':
+            let graph_remove_edge = new Graph();
+            console.log('Adjacency list', graph_remove_edge.addVertex('Tokyo'));
+            console.log('Adjacency list', graph_remove_edge.addVertex('Dallas'));
+            console.log('Adjacency list', graph_remove_edge.addVertex('Aspen'));
+            console.log('Adjacency list', graph_remove_edge.addEdge('Tokyo', 'Dallas'));
+            console.log('Adjacency list', graph_remove_edge.addEdge('Dallas', 'Aspen'));
+            console.log('Adjacency list', graph_remove_edge.removeEdge('Tokyo', 'Dallas'));
+            break;
+        case '35':
+            let graph_remove_vertex = new Graph();
+            console.log('Adjacency list', graph_remove_vertex.addVertex('Tokyo'));
+            console.log('Adjacency list', graph_remove_vertex.addVertex('Dallas'));
+            console.log('Adjacency list', graph_remove_vertex.addVertex('Aspen'));
+            console.log('Adjacency list', graph_remove_vertex.addVertex('HongKong'));
+            console.log('Adjacency list', graph_remove_vertex.addVertex('LosAngeles'));
+            console.log('Adjacency list', graph_remove_vertex.addEdge('Tokyo', 'Dallas'));
+            console.log('Adjacency list', graph_remove_vertex.addEdge('Tokyo', 'HongKong'));
+            console.log('Adjacency list', graph_remove_vertex.addEdge('Dallas', 'Aspen'));
+            console.log('Adjacency list', graph_remove_vertex.addEdge('Dallas', 'HongKong'));
+            console.log('Adjacency list', graph_remove_vertex.addEdge('Dallas', 'LosAngeles'));
+            console.log('Adjacency list', graph_remove_vertex.addEdge('LosAngeles', 'HongKong'));
+            console.log('Adjacency list', graph_remove_vertex.removeVertex('HongKong'));
+            break;
+        case '36':
+            let graph_dfs_recursive = new Graph();
+            graph_dfs_recursive.addVertex('A');
+            graph_dfs_recursive.addVertex('B');
+            graph_dfs_recursive.addVertex('C');
+            graph_dfs_recursive.addVertex('D');
+            graph_dfs_recursive.addVertex('E');
+            graph_dfs_recursive.addVertex('F');
+            graph_dfs_recursive.addEdge('A', 'B');
+            graph_dfs_recursive.addEdge('A', 'C');
+            graph_dfs_recursive.addEdge('B', 'D');
+            graph_dfs_recursive.addEdge('C', 'E');
+            graph_dfs_recursive.addEdge('D', 'E');
+            graph_dfs_recursive.addEdge('D', 'F');
+            graph_dfs_recursive.addEdge('E', 'F');
+            console.log('Adjacency list', graph_dfs_recursive.adjacencyList);
+            console.log(graph_dfs_recursive.dfs_recursive('A'));
+            break;
+        case '37':
+            let graph_dfs_iterative = new Graph();
+            graph_dfs_iterative.addVertex('A');
+            graph_dfs_iterative.addVertex('B');
+            graph_dfs_iterative.addVertex('C');
+            graph_dfs_iterative.addVertex('D');
+            graph_dfs_iterative.addVertex('E');
+            graph_dfs_iterative.addVertex('F');
+            graph_dfs_iterative.addEdge('A', 'B');
+            graph_dfs_iterative.addEdge('A', 'C');
+            graph_dfs_iterative.addEdge('B', 'D');
+            graph_dfs_iterative.addEdge('C', 'E');
+            graph_dfs_iterative.addEdge('D', 'E');
+            graph_dfs_iterative.addEdge('D', 'F');
+            graph_dfs_iterative.addEdge('E', 'F');
+            console.log('Adjacency list', graph_dfs_iterative.adjacencyList);
+            console.log(graph_dfs_iterative.dfs_iterative('A'));
             break;
         default:
             console.log('Invalid selection')
