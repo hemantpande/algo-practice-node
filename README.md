@@ -1,4 +1,79 @@
-# Algorithm notes:-
+- [Algorithm notes:](#algorithm-notes)
+    - [How to run the solution?](#how-to-run-the-solution)
+  - [Basics](#basics)
+    - [Frequency counter pattern](#frequency-counter-pattern)
+    - [Multiple counter pattern](#multiple-counter-pattern)
+        - [Another example](#another-example)
+    - [Sliding window pattern](#sliding-window-pattern)
+    - [Recursion](#recursion)
+  - [Search](#search)
+    - [Linear search](#linear-search)
+    - [Linked lists](#linked-lists)
+    - [Doubly linked list](#doubly-linked-list)
+    - [Stacks](#stacks)
+      - [Operations](#operations)
+        - [Push](#push)
+        - [Pop](#pop)
+    - [Queue](#queue)
+      - [Operations](#operations-1)
+        - [EnQueue](#enqueue)
+        - [Dequeue](#dequeue)
+    - [Trees](#trees)
+      - [Terminology](#terminology)
+      - [Uses](#uses)
+      - [Binary Search tree.](#binary-search-tree)
+      - [Why use BST?](#why-use-bst)
+      - [Tree Operations:](#tree-operations)
+        - [Insert a new node](#insert-a-new-node)
+        - [Finding a node](#finding-a-node)
+    - [Tree traversals](#tree-traversals)
+      - [Breadth first search](#breadth-first-search)
+        - [Algorithm](#algorithm)
+      - [Depth first search](#depth-first-search)
+        - [Pre-order traversal:](#pre-order-traversal)
+        - [Post-order traversal:](#post-order-traversal)
+        - [In-order traversal:](#in-order-traversal)
+    - [BFS vs DFS](#bfs-vs-dfs)
+    - [In-order vs Pre-order vs Post-order](#in-order-vs-pre-order-vs-post-order)
+    - [Binary heaps](#binary-heaps)
+      - [Max Binary Heap](#max-binary-heap)
+      - [Min binary heaps](#min-binary-heaps)
+      - [Why heaps?](#why-heaps)
+      - [Data model](#data-model)
+      - [Adding to a Max binary heap](#adding-to-a-max-binary-heap)
+      - [PSEUDO CODE](#pseudo-code)
+      - [Extract Max, Remove element from heap.](#extract-max-remove-element-from-heap)
+      - [Operation](#operation)
+      - [PSEUDO CODE](#pseudo-code-1)
+    - [Priority Queue](#priority-queue)
+    - [Hash tables](#hash-tables)
+      - [Separate chaining](#separate-chaining)
+      - [Operations with separate chaining](#operations-with-separate-chaining)
+      - [Linear probing](#linear-probing)
+    - [Graphs](#graphs)
+      - [Terminology](#terminology-1)
+      - [Undirected Graphs](#undirected-graphs)
+      - [Directed graph](#directed-graph)
+      - [Weighted graph](#weighted-graph)
+      - [Un-Weighted graph](#un-weighted-graph)
+    - [How do we represent information in graphs?](#how-do-we-represent-information-in-graphs)
+      - [Adjacency Matrix](#adjacency-matrix)
+      - [Adjacency list](#adjacency-list)
+        - [Better approach](#better-approach)
+      - [Big O comparison of Adjacency matrix and Adjacency list.](#big-o-comparison-of-adjacency-matrix-and-adjacency-list)
+      - [Operations](#operations-2)
+      - [Tree traversals](#tree-traversals-1)
+        - [Use cases](#use-cases)
+      - [DEPTH FIRST TRAVERSAL](#depth-first-traversal)
+        - [Steps (Recursive)](#steps-recursive)
+        - [PSUDOCODE](#psudocode)
+        - [Steps (Iterative)](#steps-iterative)
+      - [BREADTH FIRST TRAVERSAL](#breadth-first-traversal)
+    - [DYNAMIC PROGRAMMING](#dynamic-programming)
+
+
+
+# Algorithm notes:
 
 ### How to run the solution?
 - `npm start` and select the program you want to run.
@@ -19,7 +94,7 @@
 4. If arr[left] + arr[right] > 0, increment right.
 5. The idea is simple, if the sum goes high on positive side, decrement right pointer, if sum goes on negative side, increment left counter, to sort of converge at the middle.
 
-##### Another example,
+##### Another example
 1. Given an array [1,1,1,2,2,3,3,3,5,6,7,7,10], find the number of unique elements in it.
 2. Start 2 pointers, root = array[0] and scout = array[1].
 3. Add root to result as a first element.
@@ -174,7 +249,7 @@ Stacks are use in -
 1. Push/pop - will give Stack
 2. Unshift/shift - will give Queue
 
-#### Operations - 
+#### Operations
 
 **Stack only has 2 operations - Push and Pop. Note that both these operations should be constant time.**
 
@@ -188,7 +263,7 @@ Last    A
 
 ```
 
-#### Push
+##### Push
 1. The function should accept a value
 2. Create a new node with that value
 3. If there are no nodes in the stack, set the first and last property to be the newly created node 
@@ -197,7 +272,7 @@ Last    A
 6. Set the next property on the node to be the previously created variable
 7. Increment the size of the stack by 1
 
-#### Pop
+##### Pop
 1. If there are no nodes in the stack, return null
 2. Create a temporary variable to store the first property on the stack
 3. If there is only 1 node, set the first and last property to be null
@@ -230,16 +305,16 @@ So a better approach, is to add at the end, and remove from the beginning, then 
 And then simply pop from beginning.
 ```
 
-### Operations
+#### Operations
 
-#### EnQueue
+##### EnQueue
 1. This function accepts some value
 2. Create a new node using that value passed to the function
 3. If there are no nodes in the queue, set this node to be the first and last property of the queue
 4. Otherwise, set the next property on the current last to be that node, and then set the last property of the queue to be that node
 5. Increment the size of the queue by 1
 
-#### Dequeue
+##### Dequeue
 1. If there is no first property, just return null
 2. Store the first property in a variable
 3. See if the first is the same as the last (check if there is only 1 node). If so, set the first and last to be null
@@ -253,7 +328,7 @@ A data structure that consists of nodes in a parent / child relationshipIf we th
 
 Tree can also represented as a Graph, where there exists only one path to navigate between 2 nodes.
 
-#### Terminology - 
+#### Terminology
 - **Root** - The top node in a tree.
 - **Child** -A node directly connected to another node when moving away from the Root.
 - **Parent** - The converse notion of a child.
@@ -283,9 +358,9 @@ Rules -
 #### Why use BST?
 Binary search tree has Big O complexity of Log n, and is therefore preferable.
 
-### Operations:
+#### Tree Operations:
 
-#### Insert a new node
+##### Insert a new node
 
 1. Create a new node
 2. Starting at the root
@@ -300,7 +375,7 @@ Binary search tree has Big O complexity of Log n, and is therefore preferable.
             - If there is, move to that node and repeat these steps
             - If there is not, add that node as the left property
 
-#### Finding a node
+##### Finding a node
 
 - Starting at the root
     - Check if there is a root, if not - we're done searching!
@@ -898,13 +973,13 @@ A Graph, unlike a Tree does not have a root. We therefore have to remember the n
 
 Below illustration, can help visualize DFS.
 
-![graph DFS](.resources/graph_dfs_1.png)
-![graph DFS](.resources/graph_dfs_2.png)
-![graph DFS](.resources/graph_dfs_3.png)
-![graph DFS](.resources/graph_dfs_4.png)
-![graph DFS](.resources/graph_dfs_5.png)
-![graph DFS](.resources/graph_dfs_6.png)
-![graph DFS](.resources/graph_dfs_7.png)
+![graph DFS](./resources/graph_dfs_1.png)
+![graph DFS](./resources/graph_dfs_2.png)
+![graph DFS](./resources/graph_dfs_3.png)
+![graph DFS](./resources/graph_dfs_4.png)
+![graph DFS](./resources/graph_dfs_5.png)
+![graph DFS](./resources/graph_dfs_6.png)
+![graph DFS](./resources/graph_dfs_7.png)
 
 ##### Steps (Recursive)
     - The function should accept a starting node
@@ -986,3 +1061,6 @@ DFS-iterative(start):
 #### BREADTH FIRST TRAVERSAL
 
 <We'll come back to this>
+
+### DYNAMIC PROGRAMMING
+
