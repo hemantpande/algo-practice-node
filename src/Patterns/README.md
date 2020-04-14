@@ -14,7 +14,7 @@
 4. If arr[left] + arr[right] > 0, increment right.
 5. The idea is simple, if the sum goes high on positive side, decrement right pointer, if sum goes on negative side, increment left counter, to sort of converge at the middle.
 
-##### Another example
+#### Another example
 1. Given an array [1,1,1,2,2,3,3,3,5,6,7,7,10], find the number of unique elements in it.
 2. Start 2 pointers, root = array[0] and scout = array[1].
 3. Add root to result as a first element.

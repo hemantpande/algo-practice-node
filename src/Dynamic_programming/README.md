@@ -34,9 +34,9 @@ fib(5)
 
 Notice, that we are calculating the values for Fib(3) for example, 2 times.
 
-![DP1](./resources/dp_fibo_1.png)
+![DP1](../../resources/dp_fibo_1.png)
 
-![DP3](./resources/growth_of_recursive_fibo.png)
+![DP3](../../resources/growth_of_recursive_fibo.png)
 
 This is a classic example of a problem that can be solved using Dynamic programming, since it has overlapping subproblems.
 
@@ -44,20 +44,20 @@ The big O complexity of this solution is 2^n. Actually it is (1.62^n). Remember 
 
 How bad is 1.62^n. 
 
-![big o comparison](./resources/graphs_big_O.png)
+![big o comparison](../../resources/graphs_big_O.png)
 
 **What is not a good problem to solve using DP?**
 
 Consider, merge sort. The subproblems in merge sort are not reproducable. Hence, it is not a good candidate for DP.
 
-![DP2](./resources/dp_merge_sort.png)
+![DP2](../../resources/dp_merge_sort.png)
 
 **How can we improve the solution?**
 
 We're repeating things. We can use the results of the sub-problems calculated earlier.
 
-![improve dp](./resources/improve_recursive.png)
-![improve dp](./resources/improve_recursive_2.png)
+![improve dp](../../resources/improve_recursive.png)
+![improve dp](../../resources/improve_recursive_2.png)
 
 There are 2 ways of caching or storing the results of the subproblems, they are called :
 

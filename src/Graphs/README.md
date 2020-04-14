@@ -23,17 +23,17 @@ Used in -
 
 In undirected graphs, there is no polarity to edges. For example, Facebook. If 2 people are friends, they both share each others content, it's mutual.
 
-![Undirected graph](./resources/undirected_graph.png)
+![Undirected graph](../../resources/undirected_graph.png)
 
 ## Directed graph
 
 In directed graphs, there is a direction associated between any two connected nodes. In below diagram, A and B are connected, we can go from B to A, **but not vice-versa**.
 
-![Directed graph](./resources/directed_graph.png)
+![Directed graph](../../resources/directed_graph.png)
 
 For example, Instagram or Twitter. People follow others, but the people they follow, might not follow them back.
 
-![Directed graph](./resources/directed_graph_2.png)
+![Directed graph](../../resources/directed_graph_2.png)
 
 **Facebook is a undirected graph, Instagram, Twitter are directed graphs**
 
@@ -41,7 +41,7 @@ For example, Instagram or Twitter. People follow others, but the people they fol
 
 Weighted graph is the one in which each edge has a weight associated with it.
 
-![Weighted graph](./resources/weighted_graph.png)
+![Weighted graph](../../resources/weighted_graph.png)
 
 ## Un-Weighted graph
 
@@ -51,7 +51,7 @@ As the name suggests, the edges do not have a weight associated.
 
 ### Adjacency Matrix
 
-![Adjacency Matrix](./resources/adjacency_matrix.png)
+![Adjacency Matrix](../../resources/adjacency_matrix.png)
 
 - **1** - Represents a connection between any two nodes.
 - **0** - Represents no connection.
@@ -61,7 +61,7 @@ As the name suggests, the edges do not have a weight associated.
 
 ### Adjacency list
 
-![Adjacency list](resources/adjacency_list.png)
+![Adjacency list](../../resources/adjacency_list.png)
 
 If we want to find the nodes connected to node 3 for example, 
 - we can go to the 3rd index
@@ -73,7 +73,7 @@ This implementation was easy, but it has flaws:-
 
 ### Better approach
 
-![Adjacency list](./resources/adjacency_list_2.png)
+![Adjacency list](../../resources/adjacency_list_2.png)
 
 Adjaency list can take advantage of **hash table**, by storing 
 - the value of node as a key 
@@ -83,14 +83,14 @@ In this example, we look for "A", and that gives us the nodes connected to "A".
 
 ### Big O comparison of Adjacency matrix and Adjacency list.
 
-![Graphs Big O](./resources/graphs_big_O.png)
+![Graphs Big O](../../resources/graphs_big_O.png)
 
 - For Adding a new node, we need to add a new row and new column to Adjacency Matrix, it is therefore O(V^2), since it is a 2-dimentional structure.
 - Whereas for adjacency list, it's just adding a new key-value pair.
 
 More key diffrences below - 
 
-![Differences](resources/adjacency_matrix_vs_list.png)
+![Differences](../../resources/adjacency_matrix_vs_list.png)
 
 ## Operations
 
@@ -189,7 +189,7 @@ g.removeEdge("Tokyo", "Dallas")
     - Inside of the loop, call our removeEdge function with the vertex we are removing and any values in the adjacency list for that vertex
     - delete the key in the adjacency list for that vertex
   
-  ![remove node](./resources/remove_node_in_graph.png)
+  ![remove node](../../resources/remove_node_in_graph.png)
 
 ## Graph traversals
 
@@ -207,7 +207,7 @@ Graphs are widely used in recommendation engines. Let's look at the example belo
 
 Let's say we have a graph like this, and we want to recommend movies to a user based on genre. User who likes movie 'Halo', can be recommended 'Borderlands', since they have common genres.
 
-![movie recommendation](./resources/movie_recommendation.png)
+![movie recommendation](../../resources/movie_recommendation.png)
 
 Another example, Let's say we want to give friend recommendations
 
@@ -215,7 +215,7 @@ Maria is friends with Nan. Armie is also friends with Nan.
 
 Both Maria and Armie are also friends with Tim. So it is very likely that Tim is also friends with Nan. 
 
-![Friend recommendation](./resources/friend_recommendations.png)
+![Friend recommendation](../../resources/friend_recommendations.png)
 
 ## DEPTH FIRST TRAVERSAL 
 
@@ -223,13 +223,13 @@ A Graph, unlike a Tree does not have a root. We therefore have to remember the n
 
 Below illustration, can help visualize DFS.
 
-![graph DFS](./resources/graph_dfs_1.png)
-![graph DFS](./resources/graph_dfs_2.png)
-![graph DFS](./resources/graph_dfs_3.png)
-![graph DFS](./resources/graph_dfs_4.png)
-![graph DFS](./resources/graph_dfs_5.png)
-![graph DFS](./resources/graph_dfs_6.png)
-![graph DFS](./resources/graph_dfs_7.png)
+![graph DFS](../../resources/graph_dfs_1.png)
+![graph DFS](../../resources/graph_dfs_2.png)
+![graph DFS](../../resources/graph_dfs_3.png)
+![graph DFS](../../resources/graph_dfs_4.png)
+![graph DFS](../../resources/graph_dfs_5.png)
+![graph DFS](../../resources/graph_dfs_6.png)
+![graph DFS](../../resources/graph_dfs_7.png)
 
 ### Steps (Recursive)
     - The function should accept a starting node
@@ -245,13 +245,13 @@ Below illustration, can help visualize DFS.
 
 ### PSUDOCODE
 
-![graph dfs](./resources/graph_dfs_8.png)
-![graph dfs](./resources/graph_dfs_9.png)
-![graph dfs](./resources/graph_dfs_10.png)
-![graph dfs](./resources/graph_dfs_11.png)
-![graph dfs](./resources/graph_dfs_12.png)
-![graph dfs](./resources/graph_dfs_13.png)
-![graph dfs](./resources/graph_dfs_14.png)
+![graph dfs](../../resources/graph_dfs_8.png)
+![graph dfs](../../resources/graph_dfs_9.png)
+![graph dfs](../../resources/graph_dfs_10.png)
+![graph dfs](../../resources/graph_dfs_11.png)
+![graph dfs](../../resources/graph_dfs_12.png)
+![graph dfs](../../resources/graph_dfs_13.png)
+![graph dfs](../../resources/graph_dfs_14.png)
 
 ```
 /// DFS Recursive

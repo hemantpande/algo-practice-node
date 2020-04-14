@@ -13,12 +13,12 @@ Very similar to a binary search tree, but with some additional rules!
 
 Example - 
 **Max binary Heap** - 
-![Binary heap](./resources/max_binary_heap.png)
+![Binary heap](../../resources/max_binary_heap.png)
 
 ## Min binary heaps
 
 Example - 
-![Min binary heap](resources/min_binary_heap.png)
+![Min binary heap](../../resources/min_binary_heap.png)
 
 ## Why heaps?
 
@@ -30,35 +30,35 @@ Example -
 
 Binary heaps are usually represented using an Array or Linked list data structure.
 
-![Heap representation](./resources/heap_representation.png)
+![Heap representation](../../resources/heap_representation.png)
 
-![Heap representation](./resources/heap_representation_2.png)
+![Heap representation](../../resources/heap_representation_2.png)
 
-![Heap representation](./resources/heap_representation_3.png)
+![Heap representation](../../resources/heap_representation_3.png)
 
-![Heap representation](./resources/heap_representation_4.png)
+![Heap representation](../../resources/heap_representation_4.png)
 
-![Heap representation](./resources/heap_representation_5.png)
+![Heap representation](../../resources/heap_representation_5.png)
 
-![Heap representation](./resources/heap_representation_6.png)
+![Heap representation](../../resources/heap_representation_6.png)
 
-![Heap representation](./resources/heap_representation_7.png)
+![Heap representation](../../resources/heap_representation_7.png)
 
 ## Adding to a Max binary heap
 
-![Insert Max Heap](./resources/max_binary_heap_insert_1.png)
+![Insert Max Heap](../../resources/max_binary_heap_insert_1.png)
 
-![Insert Max Heap](./resources/max_binary_heap_insert_2.png)
+![Insert Max Heap](../../resources/max_binary_heap_insert_2.png)
 
-![Insert Max Heap](./resources/max_binary_heap_insert_3.png)
+![Insert Max Heap](../../resources/max_binary_heap_insert_3.png)
 
-![Insert Max Heap](./resources/max_binary_heap_insert_4.png)
+![Insert Max Heap](../../resources/max_binary_heap_insert_4.png)
 
-![Insert Max Heap](./resources/max_binary_heap_insert_5.png)
+![Insert Max Heap](../../resources/max_binary_heap_insert_5.png)
 
-![Insert Max Heap](./resources/max_binary_heap_insert_6.png)
+![Insert Max Heap](../../resources/max_binary_heap_insert_6.png)
 
-![Insert Max Heap](./resources/max_binary_heap_insert_7.png)
+![Insert Max Heap](../../resources/max_binary_heap_insert_7.png)
 
 ### PSEUDO CODE
 
@@ -76,19 +76,19 @@ Wiki says, The procedure for deleting the root from the heap (effectively extrac
 
 ### Operation
 
-![Extract Max](resources/heap_extract_max_1.png)
+![Extract Max](../../resources/heap_extract_max_1.png)
 
-![Extract Max](resources/heap_extract_max_2.png)
+![Extract Max](../../resources/heap_extract_max_2.png)
 
-![Extract Max](resources/heap_extract_max_3.png)
+![Extract Max](../../resources/heap_extract_max_3.png)
 
-![Extract Max](resources/heap_extract_max_4.png)
+![Extract Max](../../resources/heap_extract_max_4.png)
 
-![Extract Max](resources/heap_extract_max_5.png)
+![Extract Max](../../resources/heap_extract_max_5.png)
 
-![Extract Max](resources/heap_extract_max_6.png)
+![Extract Max](../../resources/heap_extract_max_6.png)
 
-![Extract Max](resources/heap_extract_max_7.png)
+![Extract Max](../../resources/heap_extract_max_7.png)
 
 ### PSEUDO CODE
 - Swap the first value in the values property with the last one

@@ -9,13 +9,13 @@ Nearly every programming language has some sort of hash table data structure. Be
 
 Hash tables maps keys to objects. The underlying data structures in a has table is an array. When we pass in a key to a has table, it converts that key into an index that can be used to access the object which is stored in the array.
 
-![Hash tables](./resources/hash_tables_1.png)
+![Hash tables](../../resources/hash_tables_1.png)
 
-![Hash tables](./resources/hash_tables_2.png)
+![Hash tables](../../resources/hash_tables_2.png)
 
-![Hash tables](./resources/hash_tables_3.png)
+![Hash tables](../../resources/hash_tables_3.png)
 
-![Hash tables](./resources/hash_tables_4.png)
+![Hash tables](../../resources/hash_tables_4.png)
 
 The important key here is the **HASH FUNCTION** which translates a key into an index, during retrievel and insert.
 
@@ -39,13 +39,13 @@ With separate chaining, at each index in our array we store values using a more 
 
 This allows us to store multiple key-value pairs at the same index.
 
-![Separate chaining](./resources/separate_chaining_1.png)
+![Separate chaining](../../resources/separate_chaining_1.png)
 
-![Separate chaining](./resources/separate_chaining_2.png)
+![Separate chaining](../../resources/separate_chaining_2.png)
 
-![Separate chaining](./resources/separate_chaining_3.png)
+![Separate chaining](../../resources/separate_chaining_3.png)
 
-![Separate chaining](./resources/separate_chaining_4.png)
+![Separate chaining](../../resources/separate_chaining_4.png)
 
 #### Operations with separate chaining
 
@@ -65,4 +65,4 @@ With linear probing, when we find a collision, we search through the array to fi
 
 Unlike with separate chaining, this allows us to store a single key-value at each index.
 
-![Linear probing](./resources/linear_probing.png)
+![Linear probing](../../resources/linear_probing.png)

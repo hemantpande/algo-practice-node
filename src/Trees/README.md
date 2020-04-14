@@ -140,7 +140,6 @@ When to-do is empty, return the visited array.
 
 ```
 
-
 ### Algorithm
 - Create a queue (this can be an array) and a variable to store the values of nodes visited
 - Place the root node in the queue
@@ -153,47 +152,47 @@ When to-do is empty, return the visited array.
 ## Depth first search
 
 ### Pre-order traversal:
-![Pre order traversal](./resources/DFS_pre_order.png)
+![Pre order traversal](../../resources/DFS_pre_order.png)
 
 **Iteration 1**:
-![Iteration 1](./resources/DFS_pre_order_iteration_1.png)
+![Iteration 1](../../resources/DFS_pre_order_iteration_1.png)
 
 **Iteration 2**:
-![Iteration 2](./resources/DFS_pre_order_iteration_2.png)
+![Iteration 2](../../resources/DFS_pre_order_iteration_2.png)
 
 **Iteration 3**:
-![Iteration 3](./resources/DFS_pre_order_iteration_3.png)
+![Iteration 3](../../resources/DFS_pre_order_iteration_3.png)
 
 **Iteration 4**:
-![Iteration 4](./resources/DFS_pre_order_iteration_4.png)
+![Iteration 4](../../resources/DFS_pre_order_iteration_4.png)
 
 **Iteration 5**:
-![Iteration 5](./resources/DFS_pre_order_iteration_5.png)
+![Iteration 5](../../resources/DFS_pre_order_iteration_5.png)
 
 **Iteration 6**:
-![Iteration 6](./resources/DFS_pre_order_iteration_6.png)
+![Iteration 6](../../resources/DFS_pre_order_iteration_6.png)
 
 
 ### Post-order traversal:
-![Post order traversal](./resources/DFS_post_order.png)
+![Post order traversal](../../resources/DFS_post_order.png)
 
 **Iteration 1**:
-![Iteration 1](./resources/DFS_post_order_iteration_1.png)
+![Iteration 1](../../resources/DFS_post_order_iteration_1.png)
 
 **Iteration 2**:
-![Iteration 2](./resources/DFS_post_order_iteration_2.png)
+![Iteration 2](../../resources/DFS_post_order_iteration_2.png)
 
 **Iteration 3**:
-![Iteration 3](./resources/DFS_post_order_iteration_3.png)
+![Iteration 3](../../resources/DFS_post_order_iteration_3.png)
 
 **Iteration 4**:
-![Iteration 4](./resources/DFS_post_order_iteration_4.png)
+![Iteration 4](../../resources/DFS_post_order_iteration_4.png)
 
 **Iteration 5**:
-![Iteration 5](./resources/DFS_post_order_iteration_5.png)
+![Iteration 5](../../resources/DFS_post_order_iteration_5.png)
 
 **Iteration 6**:
-![Iteration 6](./resources/DFS_post_order_iteration_6.png)
+![Iteration 6](../../resources/DFS_post_order_iteration_6.png)
 
 **Side note** - We accidentally did this (due to an immature copy-paste) - 
 
@@ -221,19 +220,19 @@ This is an interesting output. We have tuples here of (Parent, left, right), wit
 ### In-order traversal:
 
 **Iteration 1**:
-![Iteration 1](./resources/DFS_in_order_iteration_1.png)
+![Iteration 1](../../resources/DFS_in_order_iteration_1.png)
 
 **Iteration 2**:
-![Iteration 2](./resources/DFS_in_order_iteration_2.png)
+![Iteration 2](../../resources/DFS_in_order_iteration_2.png)
 
 **Iteration 3**:
-![Iteration 3](./resources/DFS_in_order_iteration_3.png)
+![Iteration 3](../../resources/DFS_in_order_iteration_3.png)
 
 **Iteration 4**:
-![Iteration 4](./resources/DFS_in_order_iteration_4.png)
+![Iteration 4](../../resources/DFS_in_order_iteration_4.png)
 
 **Iteration 5**:
-![Iteration 5](./resources/DFS_in_order_iteration_5.png)
+![Iteration 5](../../resources/DFS_in_order_iteration_5.png)
 
 ## BFS vs DFS
 

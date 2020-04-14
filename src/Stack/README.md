@@ -11,7 +11,7 @@ Stacks are use in -
 1. Push/pop - will give Stack
 2. Unshift/shift - will give Queue
 
-#### Operations
+### Operations
 
 **Stack only has 2 operations - Push and Pop. Note that both these operations should be constant time.**
 
@@ -25,7 +25,7 @@ Last    A
 
 ```
 
-##### Push
+#### Push
 1. The function should accept a value
 2. Create a new node with that value
 3. If there are no nodes in the stack, set the first and last property to be the newly created node 
@@ -34,7 +34,7 @@ Last    A
 6. Set the next property on the node to be the previously created variable
 7. Increment the size of the stack by 1
 
-##### Pop
+#### Pop
 1. If there are no nodes in the stack, return null
 2. Create a temporary variable to store the first property on the stack
 3. If there is only 1 node, set the first and last property to be null
