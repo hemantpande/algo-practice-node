@@ -43,12 +43,12 @@
 
 ## Data Structures
 
-#### [Linked List](.src/Linked_lists/README_LINKED_LIST.md)
+#### [Linked List](./src/Linked_lists/README_LINKED_LIST.md)
 
 #### Doubly linked list
 We'll come back to this section, skipping for now
 
-#### [Stacks](.src/Stack/README.md)
+#### [Stacks](./src/Stack/README.md)
 
 #### [Queue](./src/Queue/README.md)
 
@@ -58,10 +58,10 @@ We'll come back to this section, skipping for now
 
 #### [Priority Queue](./src/Heap/README_PRIORITY_QUEUE.md)
 
-#### [Hash tables](.src/HashTable/README.md)
+#### [Hash tables](./src/HashTable/README.md)
 
-#### [Graphs](.src/Graphs/README.md)
+#### [Graphs](./src/Graphs/README.md)
 
 ## Algorithm Paradigms
 
-#### [Dynamic Programming](.src/Dynamic_programming/README.md)
+#### [Dynamic Programming](./src/Dynamic_programming/README.md)

@@ -10,6 +10,7 @@ import { BinarySearchTree } from "./Trees/BinarySearchTree";
 import { MaxBinaryHeap } from "./Heap/MaxBinaryHeap";
 import { HashTable } from "./HashTable/HashTable";
 import { Graph } from "./Graphs/Graphs";
+import { stairs } from "./Dynamic_programming/Stairs";
 
 const readline = require('readline');
 
@@ -21,7 +22,6 @@ const rl = readline.createInterface({
 const topic = `What are you looking for?
     1. Data Structures
     2. Leetcode problems
-    \n
 `;
 
 rl.question(topic, (path) => {
@@ -50,7 +50,8 @@ function executeDataStructures() {
     6. Max Binary Heaps
     7. Hash tables
     8. Graphs
- \n`;
+    9. Dynamic programming
+    `;
 
     rl.question(question, (topic) => {
         console.log('Which operation?');
@@ -79,6 +80,9 @@ function executeDataStructures() {
             case '8':
                 graph();
                 break;
+            case '9':
+                dynamicProgramming();
+                break;
             default:
                 break;
         }
@@ -93,7 +97,7 @@ function patterns() {
         3. Find the number of unique elements in an array
         4. Find the maximum sum of N consecutive elements in an array
         5. Helper method recursion. Get odd numbers.
-        \n`;
+        `;
 
     rl.question(question, (answer) => {
 
@@ -134,7 +138,7 @@ function singlyLinkedList() {
         7. Insert at given index.
         8. Remove at given index.
         9. In-place reversal.
-        \n`;
+        `;
 
     rl.question(question, (answer) => {
 
@@ -245,7 +249,7 @@ function stack() {
     Stack - 
         1. Push
         2. Pop
-    \n`;
+    `;
     rl.question(question, (answer) => {
 
         switch (answer) {
@@ -283,7 +287,7 @@ function queue() {
     Queue - 
         1. Enqueue
         2. Dequeue
-        \n`;
+        `;
     rl.question(question, (answer) => {
 
         switch (answer) {
@@ -329,7 +333,7 @@ function binarySearchTree() {
         6. Depth first search - Pre-order
         7. Depth first search - Post-order
         8. Depth first search - In-order
-        \n`;
+        `;
     rl.question(question, (answer) => {
 
         switch (answer) {
@@ -438,7 +442,7 @@ function maxBinaryHeap() {
     Binary Heaps -
         1. Insert an element
         2. Remove an element 
-    `;
+        `;
     rl.question(question, (answer) => {
 
         switch (answer) {
@@ -499,7 +503,7 @@ function hashTable() {
         1. Insert an element
         2. Set using Separate chaining
         3. Get using Separate chaining
-        \n`;
+        `;
 
     rl.question(question, (answer) => {
 
@@ -547,7 +551,7 @@ function graph() {
         4. Remove vertex
         5. Depth first search - recursive
         6. Depth first search - iterative
-    \n`;
+    `;
 
     rl.question(question, (answer) => {
 
@@ -624,6 +628,32 @@ function graph() {
                 graph_dfs_iterative.addEdge('E', 'F');
                 console.log('Adjacency list', graph_dfs_iterative.adjacencyList);
                 console.log(graph_dfs_iterative.dfs_iterative('A'));
+                break;
+            default:
+                console.log('Invalid selection')
+                break;
+        }
+
+        rl.close();
+    });
+}
+
+function dynamicProgramming(){
+    const question = `
+    Dynamic programming
+        1. Imagine that a person is standing at the bottom of the stairs 
+            and wants to reach the top and the person can climb 
+            either 1 stair or 2 stairs at a time. 
+            Your function should return the number of ways 
+            the person can reach the top by only climbing 1 or 2 stairs at a time.
+        2. Coin change
+        `;
+
+    rl.question(question, (answer) => {
+
+        switch (answer) {
+            case '1':
+                console.log(stairs(5));
                 break;
             default:
                 console.log('Invalid selection')
