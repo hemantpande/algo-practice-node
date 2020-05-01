@@ -21,7 +21,7 @@ for a given value from a supply of coins.*/
 
 */
 
-export function coinChange(coins: [], sum: number): number {
+export function coinChange(coins: [], sum: number) {
 
 
 

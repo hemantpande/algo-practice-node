@@ -9,8 +9,9 @@ import { Queue } from "./Queue/Queue";
 import { BinarySearchTree } from "./Trees/BinarySearchTree";
 import { MaxBinaryHeap } from "./Heap/MaxBinaryHeap";
 import { HashTable } from "./HashTable/HashTable";
-import { Graph } from "./Graphs/Graphs";
+import { Graph } from "./Graphs/Graph";
 import { stairs } from "./Dynamic_programming/Stairs";
+import { WeightedGraph } from "./Shortest_path/WeightedGraph";
 
 const readline = require('readline');
 
@@ -51,6 +52,7 @@ function executeDataStructures() {
     7. Hash tables
     8. Graphs
     9. Dynamic programming
+    10. Shortest path algorithms
     `;
 
     rl.question(question, (topic) => {
@@ -83,6 +85,8 @@ function executeDataStructures() {
             case '9':
                 dynamicProgramming();
                 break;
+            case '10':
+                shortestPathAlgorithms();
             default:
                 break;
         }
@@ -551,6 +555,8 @@ function graph() {
         4. Remove vertex
         5. Depth first search - recursive
         6. Depth first search - iterative
+        7. Weighted graph - add node
+        8. Weighted graph - add edge
     `;
 
     rl.question(question, (answer) => {
@@ -629,6 +635,23 @@ function graph() {
                 console.log('Adjacency list', graph_dfs_iterative.adjacencyList);
                 console.log(graph_dfs_iterative.dfs_iterative('A'));
                 break;
+            case '7':
+                let weighted_graph = new WeightedGraph();
+                weighted_graph.addNode('A');
+                weighted_graph.addNode('B');
+                weighted_graph.addNode('C');
+                console.log('Adjacency list', weighted_graph.adjacencyList);
+                break;
+            case '8':
+                let weighted_graph_2 = new WeightedGraph();
+                weighted_graph_2.addNode('A');
+                weighted_graph_2.addNode('B');
+                weighted_graph_2.addNode('C');
+                weighted_graph_2.addEdge('A', 'B', 4);
+                weighted_graph_2.addEdge('B', 'C', 8);
+                weighted_graph_2.addEdge('C', 'A', 13);
+                console.log('Adjacency list', weighted_graph_2.adjacencyList);
+                break;
             default:
                 console.log('Invalid selection')
                 break;
@@ -664,3 +687,40 @@ function dynamicProgramming(){
     });
 }
 
+function shortestPathAlgorithms(){
+    const question = `
+    Dynamic programming
+        1. Dijkstra's shortest path algorithm
+        `;
+
+    rl.question(question, (answer) => {
+
+        switch (answer) {
+            case '1':
+                var graph = new WeightedGraph();
+                graph.addNode('A');
+                graph.addNode('B');
+                graph.addNode('C');
+                graph.addNode('D');
+                graph.addNode('E');
+                graph.addNode('F');
+
+                graph.addEdge('A', 'B', 4);
+                graph.addEdge('A', 'C', 2);
+                graph.addEdge('B', 'E', 3);
+                graph.addEdge('C', 'D', 2);
+                graph.addEdge('C', 'F', 4);
+                graph.addEdge('D', 'E', 3);
+                graph.addEdge('D', 'F', 1);
+                graph.addEdge('E', 'F', 1);
+
+                graph.dijkstra('A', 'E');
+                break;
+            default:
+                console.log('Invalid selection')
+                break;
+        }
+
+        rl.close();
+    });
+}

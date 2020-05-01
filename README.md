@@ -17,6 +17,8 @@
       - [Graphs](#graphs)
   - [Algorithm Paradigms](#algorithm-paradigms)
       - [Dynamic Programming](#dynamic-programming)
+  - [Shortest path algorithms](#shortest-path-algorithms)
+      - [Dijkstra's algorithm](#dijkstras-algorithm)
 
 
 
@@ -65,3 +67,7 @@ We'll come back to this section, skipping for now
 ## Algorithm Paradigms
 
 #### [Dynamic Programming](./src/Dynamic_programming/README.md)
+
+## Shortest path algorithms
+
+#### [Dijkstra's algorithm](./src/Shortest_path/Dijkstra.md)
